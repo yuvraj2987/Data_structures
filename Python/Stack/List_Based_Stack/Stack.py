@@ -17,7 +17,7 @@ class Stack:
 
     def push(self, element):
         if len(self.items) == self.size:
-            raise StackFullError()
+            raise StackFullError
         self.items.append(element)
 
     def pop(self):
@@ -29,4 +29,3 @@ class Stack:
         if self.isEmpty():
             raise StackEmptyError()
         return self.items[len(self.items) - 1]
-
