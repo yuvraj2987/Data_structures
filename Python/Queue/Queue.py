@@ -1,18 +1,7 @@
 
 
 # -------------------- Description --------------------------------------------
-# Queue implementation
-# queue = Queue()
-# queue -> ["abc", True]
-# queue.enqueue(10)
-# data -> 10
-# queue.enqueue("abc")
-# data -> "abc"
-# queue.enqueue("True")
-# data -> True
-# queue.dequeu()
-# 10
-
+# Different implementations of Queue class
 class Queue:
 
     def __init__(self):
