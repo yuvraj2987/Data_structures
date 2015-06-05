@@ -62,6 +62,7 @@ def test_unique_char_string():
         else:
             print "Passed"
 
+
 def test_compare_str_perm():
     methods = [compareStrPerm2]
     for m in methods:
