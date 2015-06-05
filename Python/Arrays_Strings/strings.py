@@ -43,7 +43,7 @@ def test_unique_char_string():
     """
     methods = [isUnique]
     for method in methods:
-        print "Testing %s", str(method)
+        print "Testing %s" % (str(method))
         print "Test1: Unique string"
         s = "abcd"
         if method(s):
@@ -65,7 +65,7 @@ def test_unique_char_string():
 def test_compare_str_perm():
     methods = [compareStrPerm2]
     for m in methods:
-        print "Testing %s", str(m)
+        print "Testing %s" % (str(m))
         print "Test1: unequal strings"
         s1 = "abcd"
         s2 = "bc"
@@ -81,7 +81,14 @@ def test_compare_str_perm():
             return
         else:
             print "Passed!!"
+        print "Test3: failed case"
+        s2 = "abcf"
+        if m(s1, s2):
+            print "Failed!!"
             return
+        else:
+            print "Passed!!"
+
     # end of for
     print "Success"
 
