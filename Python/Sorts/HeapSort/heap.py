@@ -36,3 +36,13 @@ class Heap:
             swap(arr, index, largest_index)
             self.maxHeapify(largest_index)
     # end of maxHeapify method
+
+    def buildMaxHeap(self):
+        arr = self.arr
+        self.heap_size = self.size - 1
+        mid_index = self.size/2
+        for index in xrange(mid_index, -1, -1):
+            self.maxHeapify(index)
+        # end of for
+    # end of method
+
