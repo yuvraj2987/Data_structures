@@ -2,17 +2,20 @@
 import unittest
 
 def countingSort(a, k):
-    c = [0,] * (k+1)
-    arr_len = len(a)
+    c = [0,] * (k+1) # O(k)
+    arr_len = len(a) # O(n)
     # Count the number of elements
+    # O(n)
     for i in xrange(0, arr_len):
         c[a[i]] += 1
     # end of for
     # sum the elements
+    # O(K)
     for j in xrange(1, k+1):
         c[j] += c[j-1]
     # end of for 
-    b = [0,] * arr_len
+    b = [0,] * arr_len # O(K)
+    # O(n)
     for i in xrange(arr_len-1, -1, -1):
         b[c[a[i]]-1] = a[i]
         c[a[i]] -= 1
