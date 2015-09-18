@@ -4,6 +4,22 @@ import Queue
 import unittest
 from sets import Set
 
+# --------- README ------------------------------------------------------------
+# Design:
+# Priorities:
+#   1) Fast initialization
+#   2) Fast get_id and free_id performance
+# Weakness:
+#   1) Clients responsibility not to free same id twice
+#    (Can be handle use extra Set data structure)
+# Data Structures:
+#   FIFO based Queue.
+#   get_id from the head of the queue. - O(1) in worst case
+#   free_id to the end of the queue. - O(1) in worst case
+#
+# Use cases: Test_ID_Manager
+#
+
 
 class InvalidIntegerId(Exception):
     pass
