@@ -2,7 +2,7 @@
 
 import Queue
 import unittest
-from sets import Set
+# from sets import Set
 
 # --------- README ------------------------------------------------------------
 # Design:
@@ -10,13 +10,18 @@ from sets import Set
 #   1) Fast initialization
 #   2) Fast get_id and free_id performance
 # Weakness:
-#   1) Clients responsibility not to free same id twice
-#    (Can be handle use extra Set data structure)
+#   1) Client's responsibility not to free same id twice
+#    (Can be handled using extra Set data structure. Check out commented lines.)
 # Data Structures:
 #   FIFO based Queue.
 #   get_id from the head of the queue. - O(1) in worst case
 #   free_id to the end of the queue. - O(1) in worst case
-#
+# Lazy Initialization:
+#   Queue is not initialized completely in the constructor.
+#   Instead an empty Queus is created.
+#   self._cur variable is set to run from start to end.
+#   Elements in the Queue are added only by free_id method.
+#   get_id method starts checking Queue only when self._cur == self._end
 # Use cases: Test_ID_Manager
 #
 
